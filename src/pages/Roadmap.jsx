@@ -1,305 +1,269 @@
-import Header from "../components/Header"
-import { BookOpen, CircleCheckBig, Check, CheckCircle, ChartNoAxesColumnIncreasing, Rocket, Circle, Lightbulb, Target, Sparkle, Mail, GraduationCap, NotebookTabs, UsersRound, Trophy } from "lucide-react"
-import flag from "../assets/flag.png"
-import rocket from "../assets/rocket.png"
-import Footer from "../components/Footer"
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+import {
+    BookOpen,
+    Sparkles,
+    Mail,
+    GraduationCap,
+    NotebookTabs,
+    UsersRound,
+    Trophy,
+    CheckCircle,
+    Circle,
+    ArrowRight
+} from "lucide-react";
+
+import flag from "../assets/flag.png";
+import rocket from "../assets/rocket.png";
+
+import { roadmapData } from "../data/roadmapData";
+
+import { Link } from "react-router-dom";
 
 const Roadmap = () => {
     return (
         <div>
             <Header />
-            <div className="flex flex-col items-center gap-5 bg-purple-50 px-20 pb-5 pt-30">
-                <div className="flex justify-between w-full px-10 h-45 items-center">
-                    <img className="h-50" src={flag}/>
-                    <div className="flex flex-col gap-5">
-                        <div className="flex gap-2 px-3 py-1 rounded-full w-fit bg-purple-200">
-                            <div className="flex items-center justify-center">
-                                <BookOpen size={16} color="#6044da" strokeWidth={2.75} />
-                            </div>
-                            <p className="font-semibold text-[#6044da]">Our Journey to Transform Learning</p>
+
+            <div className="flex flex-col items-center gap-5 bg-purple-50 px-5 sm:px-10 xl:px-20 pb-10 pt-30">
+
+                {/* Hero Section */}
+                <div className="flex flex-col lg:flex-row justify-between items-center text-center lg:text-left gap-6 w-full px-0 lg:px-10 py-2 lg:min-h-62.5">
+
+                    <img
+                        className="hidden lg:block h-32 xl:h-50"
+                        src={flag}
+                        alt="Flag"
+                    />
+
+                    <div className="flex flex-col gap-5 items-center lg:items-start">
+                        <div className="flex gap-2 px-3 py-1 items-center rounded-full w-fit bg-purple-200">
+                            <BookOpen
+                                size={18}
+                                color="#6044da"
+                                strokeWidth={2.75}
+                            />
+
+                            <p className="font-semibold text-[#6044da] text-sm sm:text-base">
+                                Our Journey to Transform Learning
+                            </p>
                         </div>
 
-                        <h1 className="text-5xl font-bold"><span className="text-[#6044da]">Learnify AI</span> Roadmap</h1>
-                        <p className="text-gray-600">We're on a mission to make personalized learning accessible to everyone.<br />Here's what we have accomplished and what's coming next.</p>
+                        <h1 className="text-3xl sm:text-4xl xl:text-5xl font-bold">
+                            <span className="text-[#6044da]">
+                                Learnify AI
+                            </span>{" "}
+                            Roadmap
+                        </h1>
+
+                        <p className="text-gray-600 text-sm sm:text-base">
+                            We're on a mission to make personalized learning
+                            accessible to everyone.
+                            <br className="hidden sm:block" />
+                            Here's what we have accomplished and what's coming next.
+                        </p>
                     </div>
-                    <img className="h-50" src={rocket}/>
+
+                    <img
+                        className="hidden lg:block h-32 xl:h-50"
+                        src={rocket}
+                        alt="Rocket"
+                    />
                 </div>
 
-                <div className="w-full xl:w-400 flex justify-between mt-5 py-5">
-                    <div className="flex flex-col gap-5 items-center">
-                        <div className="flex items-center justify-center h-15 w-15 rounded-full border bg-green-50 border-gray-200 p-2">
-                            <CircleCheckBig color="#16a34a" size={40} stroke-width={2.50}/>
-                        </div>
+                {/* Roadmap Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 xl:gap-5 w-full xl:max-w-375 mt-2 py-2 items-stretch">
 
-                        <div className="w-65 h-75 flex flex-col gap-3 p-4 rounded-2xl items-center border border-green-300">
-                            <p className="items-center justify-center flex gap-1 bg-green-100 px-3 py-1 uppercase rounded-full text-xs font-bold text-[#16a34a]"><Check color="#16a34a" size={16} stroke-width={2.75}/>Completed</p>
-                            <div className="flex flex-col">
-                                <h6 className="text-sm text-center font-bold text-[#16a34a]">Phase 1</h6>
-                                <h4 className="text-center text-xl text-[#16a34a] font-bold">Foundation</h4>
-                                <p className="text-center text-gray-700">Q1 2024</p>
-                            </div>
+                    {roadmapData.map((phase, index) => {
+                        const HeaderIcon = phase.headerIcon;
+                        const StatusIcon = phase.statusIcon;
 
-                            <div className="flex flex-col gap-1">
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#16a34a" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">AI Recommendation Engine v1</p>
+                        return (
+                            <div
+                                key={index}
+                                className="flex flex-col gap-5 items-center w-full"
+                            >
+                                <div
+                                    className={`flex items-center justify-center h-15 w-15 rounded-full border border-gray-200 p-2 ${phase.cardBg}`}
+                                >
+                                    <HeaderIcon
+                                        color={phase.color}
+                                        size={40}
+                                        strokeWidth={2.5}
+                                    />
                                 </div>
 
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#16a34a" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">User Onboarding & Profiling</p>
-                                </div>
+                                <div
+                                    className={`bg-white w-full xl:max-w-70 min-h-97.5 h-full flex flex-col p-5 rounded-2xl items-center border shadow-sm ${phase.cardBorder}`}
+                                >
+                                    <p
+                                        className={`items-center justify-center flex gap-1 ${phase.badgeBg} px-3 py-1 uppercase rounded-full text-xs font-bold ${phase.statusColor}`}
+                                    >
+                                        <StatusIcon
+                                            color={phase.color}
+                                            size={16}
+                                            strokeWidth={2.75}
+                                            fill={
+                                                phase.status !== "Completed"
+                                                    ? phase.color
+                                                    : "none"
+                                            }
+                                        />
 
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#16a34a" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Course Database Integration</p>
-                                </div>
+                                        {phase.status}
+                                    </p>
 
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#16a34a" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Basic Personalized Feed</p>
-                                </div>
+                                    <div className="flex flex-col">
+                                        <h6
+                                            className="text-sm text-center font-bold"
+                                            style={{ color: phase.color }}
+                                        >
+                                            {phase.phase}
+                                        </h6>
 
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#16a34a" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Progress Tracking</p>
-                                </div>
+                                        <h4
+                                            className="text-center text-xl font-bold"
+                                            style={{ color: phase.color }}
+                                        >
+                                            {phase.title}
+                                        </h4>
 
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#16a34a" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Web Platform Launch</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                        <p className="text-center text-gray-700 text-sm mt-1">
+                                            {phase.timeline}
+                                        </p>
+                                    </div>
 
-                    <div className="flex flex-col gap-5 items-center">
-                        <div className="flex items-center justify-center h-15 w-15 rounded-full border bg-blue-50 border-gray-200 p-2">
-                            <ChartNoAxesColumnIncreasing color="#2563eb" size={40} stroke-width={3.50}/>
-                        </div>
+                                    <div className="flex flex-col gap-3 w-full flex-1">
+                                        {phase.items.map((item, idx) => (
+                                            <div
+                                                key={idx}
+                                                className="flex gap-2 items-start"
+                                            >
+                                                {item.completed ? (
+                                                    <CheckCircle
+                                                        color={phase.color}
+                                                        size={16}
+                                                        strokeWidth={2.75}
+                                                        className="mt-1 shrink-0"
+                                                    />
+                                                ) : (
+                                                    <Circle
+                                                        color={phase.color}
+                                                        size={16}
+                                                        strokeWidth={2.75}
+                                                        className="mt-1 shrink-0"
+                                                    />
+                                                )}
 
-                        <div className="w-65 h-75 flex flex-col gap-3 p-4 rounded-2xl items-center border border-blue-300">
-                            <p className="items-center justify-center flex gap-1 bg-blue-100 px-3 py-1 uppercase rounded-full text-xs font-bold text-[#2563eb]"><Check color="#2563eb" size={16} stroke-width={2.75}/>Completed</p>
-                            <div className="flex flex-col">
-                                <h6 className="text-sm text-center font-bold text-[#2563eb]">Phase 2</h6>
-                                <h4 className="text-center text-xl text-[#2563eb] font-bold">Enhancement</h4>
-                                <p className="text-center text-gray-700">Q2 2024</p>
-                            </div>
-
-                            <div className="flex flex-col gap-1">
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#2563eb" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Advanced AI Algorithms</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#2563eb" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Learning Path Generation</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#2563eb" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Skill Gap Analysis</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#2563eb" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Smart Content Filtering</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#2563eb" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Email Notifications</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#2563eb" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Mobile Responsive UI</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col gap-5 items-center">
-                        <div className="flex items-center justify-center h-15 w-15 rounded-full border bg-purple-100 border-gray-200 p-2">
-                            <Rocket color="#6044da" size={40} stroke-width={2.50}/>
-                        </div>
-
-                        <div className="w-65 h-75 flex flex-col gap-3 p-4 rounded-2xl items-center border border-purple-300">
-                            <p className="items-center justify-center flex gap-1 bg-purple-100 px-3 py-1 uppercase rounded-full text-xs font-bold text-[#6044da]"><Circle color="#6044da" size={16} stroke-width={2.75} fill="#6044da"/>In progress</p>
-                            <div className="flex flex-col">
-                                <h6 className="text-sm text-center font-bold text-[#6044da]">Phase 3</h6>
-                                <h4 className="text-center text-xl text-[#6044da] font-bold">Personalization+</h4>
-                                <p className="text-center text-gray-700">Q3 2024 - Q4 2024</p>
-                            </div>
-
-                            <div className="flex flex-col gap-1">
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#6044da" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Learning Style Detection</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#6044da" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Adaptive Content Difficulty</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <CheckCircle color="#6044da" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Real-time Recommendations</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#6044da" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">AI mentor (Beta)</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#6044da" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Voice Search</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#6044da" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Deep Analytics Dashboard</p>
+                                                <p className="text-sm text-gray-700">
+                                                    {item.text}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col gap-5 items-center">
-                        <div className="flex items-center justify-center h-15 w-15 rounded-full border bg-orange-50 border-gray-200 p-2">
-                            <Lightbulb color="#f97316" size={40} stroke-width={2.50}/>
-                        </div>
-
-                        <div className="w-65 h-75 flex flex-col gap-3 p-4 rounded-2xl items-center border border-orange-300">
-                            <p className="items-center justify-center flex gap-1 bg-orange-100 px-3 py-1 uppercase rounded-full text-xs font-bold text-[#f97316]"><Circle color="#f97316" size={16} stroke-width={2.75} fill="#f97316"/>Upcoming</p>
-                            <div className="flex flex-col">
-                                <h6 className="text-sm text-center font-bold text-[#f97316]">Phase 4</h6>
-                                <h4 className="text-center text-xl text-[#f97316] font-bold">Smart Learning</h4>
-                                <p className="text-center text-gray-700">Q1 2025 - Q2 2025</p>
-                            </div>
-
-                            <div className="flex flex-col gap-1">
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#f97316" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">AI Tutor (Chat-based)</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#f97316" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Interactive Practice Engine</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#f97316" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Peer Learning Communities</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#f97316" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Gamification & Rewards</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#f97316" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Certificates & Achievements</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#f97316" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Offline Learning Mode</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col gap-5 items-center">
-                        <div className="flex items-center justify-center h-15 w-15 rounded-full border bg-pink-100 border-gray-200 p-2">
-                            <Target color="#db2777" size={40} stroke-width={2.50}/>
-                        </div>
-
-                        <div className="w-65 h-75 flex flex-col gap-3 p-4 rounded-2xl items-center border border-pink-300">
-                            <p className="items-center justify-center flex gap-1 bg-pink-100 px-3 py-1 uppercase rounded-full text-xs font-bold text-[#db2777]"><Circle color="#db2777" size={16} stroke-width={2.75} fill="#db2777"/>Upcoming</p>
-                            <div className="flex flex-col">
-                                <h6 className="text-sm text-center font-bold text-[#db2777]">Phase 5</h6>
-                                <h4 className="text-center text-xl text-[#db2777] font-bold">Future Vision</h4>
-                                <p className="text-center text-gray-700">Q3 2025 and beyond</p>
-                            </div>
-
-                            <div className="flex flex-col gap-1">
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#db2777" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">AR/VR Immersive Learning</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#db2777" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Global Multi-language Support</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#db2777" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Career Path Prediction</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#db2777" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Employer Connect</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#db2777" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Marketplace for Creators</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <Circle color="#db2777" size={16} stroke-width={2.75}/>
-                                    <p className="text-sm text-gray-700">Lifelong Learning Ecosystem</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        );
+                    })}
                 </div>
 
-                <div className="flex gap-5 w-full h-55 bg-purple-100 px-20 py-8 rounded-2xl">
-                    <div className="flex gap-5 w-2/3 items-center">
-                        <div className="h-20 w-20 rounded-full bg-white flex items-center justify-center">
-                            <Sparkle color="#6044da" size={40} stroke-width={2.50}/>
+                {/* CTA Section */}
+                <div className="flex flex-col xl:flex-row gap-10 w-full bg-purple-100 px-5 sm:px-10 xl:px-20 py-8 rounded-2xl overflow-hidden">
+
+                    {/* Left Section */}
+                    <div className="flex flex-col sm:flex-row gap-5 xl:w-2/3 items-center text-center sm:text-left">
+                        <div className="h-20 w-20 rounded-full bg-white flex items-center justify-center shrink-0">
+                            <Sparkles
+                                color="#6044da"
+                                size={40}
+                                strokeWidth={2.5}
+                            />
                         </div>
+
                         <div className="flex flex-col gap-5">
-                            <h3 className="font-bold text-2xl">The best learning experience is yet to come</h3>
-                            <p className="text-sm text-gray-700">We're building the future of personalized learning with AI at the core.<br/>Join us on this journey!</p>
-                            <div className="flex gap-5">
-                                <button className="px-4 py-2 rounded-lg bg-[#6044da] text-white font-semibold">Get Started for Free</button>
-                                <button className="flex gap-2 px-4 py-2 rounded-lg bg-white border border-[#6044da] text-[#6044da] font-semibold items-center">
-                                    <Mail color="#6044da" size={18}/>
+                            <h3 className="font-bold text-2xl sm:text-3xl">
+                                The best learning experience is yet to come
+                            </h3>
+
+                            <p className="text-sm text-gray-700">
+                                We're building the future of personalized
+                                learning with AI at the core.
+                                <br className="hidden sm:block" />
+                                Join us on this journey!
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Link to="/started" className="w-full sm:w-auto">
+                            <button className="flex justify-center gap-2 items-center w-full sm:w-auto cursor-pointer bg-[#6044da] text-white px-5 xl:px-7 py-2 rounded-lg font-semibold hover:bg-[#5136d4] transition-all duration-300">
+                                Get Started for Free
+                                <ArrowRight
+                                    size={16}
+                                    color="#ffffff"
+                                />
+                            </button>
+                        </Link>
+
+                                <button className="flex gap-2 px-4 py-2 rounded-lg bg-white border border-[#6044da] text-[#6044da] font-semibold items-center justify-center cursor-pointer">
+                                    <Mail
+                                        color="#6044da"
+                                        size={18}
+                                    />
+
                                     <p>Join the Waitlist</p>
                                 </button>
                             </div>
                         </div>
                     </div>
+                    {/* Right Illustration */}
+                    <div className="relative h-80 sm:h-90 xl:h-70 w-full xl:w-1/2 flex items-center justify-center">
 
-                    <div className="relative h-full flex w-1/2">
-                        <div className="absolute left-0 bottom-0 h-15 w-15 rounded-xl bg-white flex items-center justify-center border border-gray-300">
-                            <GraduationCap size={32} color="#8B5CF6"/>
+                        {/* Top Left */}
+                        <div className="absolute left-[12%] top-[12%] h-16 w-16 sm:h-18 sm:w-18 rounded-xl bg-white flex items-center justify-center border border-gray-300 shadow-md z-10">
+                            <GraduationCap
+                                size={34}
+                                color="#8B5CF6"
+                            />
                         </div>
-                        <div className="absolute left-20 bottom-15 h-15 w-15 rounded-xl bg-white flex items-center justify-center border border-gray-300">
-                            <NotebookTabs size={32} color="#8B5CF6" className="rotate-90"/>
+
+                        {/* Top Right */}
+                        <div className="absolute right-[12%] top-[12%] h-16 w-16 sm:h-18 sm:w-18 rounded-xl bg-white flex items-center justify-center border border-gray-300 shadow-md z-10">
+                            <Trophy
+                                size={34}
+                                color="#8B5CF6"
+                            />
                         </div>
-                        <img className="absolute left-30 h-40 scale-160" src={flag}/>
-                        <div className="absolute right-20 bottom-15 h-15 w-15 rounded-xl bg-white flex items-center justify-center border border-gray-300">
-                            <UsersRound size={32} color="#8B5CF6"/>
+
+                        {/* Bottom Left */}
+                        <div className="absolute left-[18%] bottom-[18%] h-16 w-16 sm:h-18 sm:w-18 rounded-xl bg-white flex items-center justify-center border border-gray-300 shadow-md z-10">
+                            <NotebookTabs
+                                size={34}
+                                color="#8B5CF6"
+                                className="rotate-90"
+                            />
                         </div>
-                        <div className="absolute right-0 bottom-0 h-15 w-15 rounded-xl bg-white flex items-center justify-center border border-gray-300">
-                            <Trophy size={32} color="#8B5CF6" />
+
+                        {/* Bottom Right */}
+                        <div className="absolute right-[18%] bottom-[18%] h-16 w-16 sm:h-18 sm:w-18 rounded-xl bg-white flex items-center justify-center border border-gray-300 shadow-md z-10">
+                            <UsersRound
+                                size={34}
+                                color="#8B5CF6"
+                            />
                         </div>
+
+                        {/* Center Flag */}
+                        <img
+                            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-28 sm:h-32 md:h-36 xl:h-44 object-contain z-20"
+                            src={flag}
+                            alt="Learning Journey"
+                        />
                     </div>
                 </div>
             </div>
-            <Footer/>
-        </div>
-    )
-}
 
-export default Roadmap
+            <Footer />
+        </div>
+    );
+};
+
+export default Roadmap;

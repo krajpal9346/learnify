@@ -23,7 +23,7 @@ const Ready = () => {
                 </div>
 
                 <div className="relative w-full xl:w-[58%] h-105 xl:h-full flex justify-center items-end mt-10 xl:mt-0">
-                    <div className="absolute top-0 left-2 sm:left-8 lg:top-10 lg:left-30 xl:top-8 xl:left-20 flex items-center gap-3 xl:gap-4 w-40 sm:w-44 xl:w-52 h-16 xl:h-20 bg-white rounded-2xl px-4 xl:px-5 shadow-xl z-30">
+                    <div className="absolute top-2 left-1/2 translate-x-[-75%] sm:left-8 sm:translate-x-0 lg:top-10 lg:left-30 xl:top-8 xl:left-20 flex items-center gap-3 xl:gap-4 w-40 sm:w-44 xl:w-52 h-16 xl:h-20 bg-white rounded-2xl px-4 xl:px-5 shadow-xl z-30">
                         <Sparkles size={20} color="#6044da" />
 
                         <div>
@@ -33,7 +33,7 @@ const Ready = () => {
                         </div>
                     </div>
 
-                    <div className="absolute top-8 right-2 sm:right-8 lg:top-25 lg:right-20 xl:top-12 xl:right-10 flex items-center gap-3 xl:gap-4 w-40 sm:w-44 xl:w-52 h-16 xl:h-20 bg-white rounded-2xl px-4 xl:px-5 shadow-xl z-30">
+                    <div className="absolute top-20 left-1/2 translate-x-[-25%] sm:right-10 sm:left-auto sm:translate-x-0 lg:top-25 lg:right-20 xl:top-12 xl:right-10 flex items-center gap-3 xl:gap-4 w-40 sm:w-44 xl:w-52 h-16 xl:h-20 bg-white rounded-2xl px-4 xl:px-5 shadow-xl z-30">
                         <Flame size={20} color="#f9911a" fill="#f9911a" />
 
                         <div>
@@ -52,7 +52,7 @@ const Ready = () => {
                         </div>
                     </div>
 
-                    <img src={girl} alt="Student learning" className="absolute bottom-20 lg:bottom-20 xl:bottom-0 left-1/2 -translate-x-1/2 h-60 sm:h-72 xl:h-80 object-contain z-20" />
+                    <img src={girl} alt="Student learning" className="absolute bottom-14 sm:bottom-10 xl:bottom-0 left-1/2 -translate-x-1/2 h-56 sm:h-72 xl:h-80 object-contain z-20"/>
                 </div>
             </div>
         </div>

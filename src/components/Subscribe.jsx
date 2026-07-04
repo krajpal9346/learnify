@@ -1,6 +1,6 @@
 const Subscribe = () => {
     return (
-        <div className="px-5 sm:px-10 xl:px-25 pt-10 xl:pt-15">
+        <div className="px-5 sm:px-10 xl:px-25 pt-10 xl:pt-15 mb-10">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-5 border border-gray-200 rounded-xl px-6 sm:px-10 py-6">
                 <div className="flex flex-col justify-center gap-3 text-center lg:text-left">
                     <h1 className="text-2xl xl:text-3xl font-bold">Stay updated with Learnify AI</h1>

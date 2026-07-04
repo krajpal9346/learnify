@@ -9,6 +9,9 @@ import Testimonials from "./pages/Testimonials"
 import Pricing from "./pages/Pricing"
 import FAQs from "./pages/FAQs"
 import Updates from "./pages/Updates"
+import Blogs from "./pages/Blogs"
+import HelpCenter from "./pages/HelpCenter"
+import Feedback from "./pages/Feedback"
 
 const App = () => {
     return (
@@ -24,6 +27,9 @@ const App = () => {
                 <Route path="/pricing" element={<Pricing/>}/>
                 <Route path="/faqs" element={<FAQs/>}/>
                 <Route path="/updates" element={<Updates/>}/>
+                <Route path="/blogs" element={<Blogs/>}/>
+                <Route path="/help-center" element={<HelpCenter/>}/>
+                <Route path="/feedback" element={<Feedback/>}/>
             </Routes>
         </BrowserRouter>
     )
