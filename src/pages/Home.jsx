@@ -1,27 +1,19 @@
-import Categories from "../components/Categories";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Ready from "../components/Ready";
-import Subscribe from "../components/Subscribe";
-import Why from "../components/Why";
-import Working from "../components/Working";
+import Categories from "../components/ui/Categories";
+import Hero from "../components/ui/Hero";
+import Ready from "../components/ui/Ready";
+import Subscribe from "../components/ui/Subscribe";
+import Why from "../components/ui/Why";
+import Working from "../components/ui/Working";
 
 const Home = () => {
     return (
         <>
-            <Header />
-
-            <main>
-                <Hero />
-                <Working />
-                <Categories />
-                <Why />
-                <Ready />
-                <Subscribe />
-            </main>
-
-            <Footer />
+            <Hero />
+            <Working />
+            <Categories />
+            <Why />
+            <Ready />
+            <Subscribe />
         </>
     );
 };
