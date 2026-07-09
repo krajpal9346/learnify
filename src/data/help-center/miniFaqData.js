@@ -3,5 +3,5 @@ export const miniFaqData = [
   "Is Learnify AI free to use?",
   "Can I cancel my subscription?",
   "How do I reset my password?",
-  "How do I update my email?",
+  "How do I update my email?"
 ];

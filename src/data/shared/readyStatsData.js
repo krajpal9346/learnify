@@ -8,10 +8,9 @@ export const readyStatsData = [
         changeColor: "text-green-500",
         icon: Sparkles,
         iconColor: "#6044da",
-        position:
-            "absolute top-2 left-1/2 translate-x-[-75%] sm:left-8 sm:translate-x-0 lg:top-10 lg:left-30 xl:top-8 xl:left-20",
+        iconFill: "#6044da",
+        position: "top-[3%] left-[2%] sm:top-[5%] sm:left-[5%] md:left-[8%]"
     },
-
     {
         title: "Learning Streak",
         value: "12 days",
@@ -20,10 +19,8 @@ export const readyStatsData = [
         icon: Flame,
         iconColor: "#f9911a",
         iconFill: "#f9911a",
-        position:
-            "absolute top-20 left-1/2 translate-x-[-25%] sm:right-10 sm:left-auto sm:translate-x-0 lg:top-25 lg:right-20 xl:top-12 xl:right-10",
+        position: "top-[22%] right-[2%] sm:top-[18%] sm:right-[5%] md:right-[8%] xl:right-0"
     },
-
     {
         title: "Skills Mastered",
         value: "8",
@@ -31,7 +28,7 @@ export const readyStatsData = [
         changeColor: "text-green-500",
         icon: Sparkles,
         iconColor: "#10b981",
-        position:
-            "absolute bottom-0 left-1/2 -translate-x-1/2 xl:bottom-10 xl:right-0 xl:left-auto xl:translate-x-0",
-    },
+        iconFill: "#10b981",
+        position: "bottom-[8%] left-[8%] sm:bottom-[6%] sm:left-[18%] md:left-[20%]"
+    }
 ];

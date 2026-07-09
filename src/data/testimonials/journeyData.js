@@ -1,9 +1,4 @@
-import {
-    Flag,
-    BookOpen,
-    CodeXml,
-    Trophy
-} from "lucide-react";
+import { Flag, BookOpen, CodeXml, Trophy } from "lucide-react";
 
 export const journeyData = [
     {

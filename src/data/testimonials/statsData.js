@@ -1,9 +1,4 @@
-import {
-    Medal,
-    UsersRound,
-    Rocket,
-    BookOpen
-} from "lucide-react";
+import { Medal, UsersRound, Rocket, BookOpen } from "lucide-react";
 
 export const statsData = [
     {

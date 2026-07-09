@@ -5,18 +5,18 @@ export const signupFeaturesData = [
     icon: Target,
     iconColor: "#6044da",
     title: "Personalized Recommendations",
-    description: "Courses tailored to your goals and skills",
+    description: "Courses tailored to your goals and skills"
   },
   {
     icon: ChartLine,
     iconColor: "#4ade80",
     title: "Track Your Progress",
-    description: "Monitor your learning and achievements",
+    description: "Monitor your learning and achievements"
   },
   {
     icon: BookOpenCheck,
     iconColor: "#f97316",
     title: "Learn Anytime, Anywhere",
-    description: "Access content on any device, anytime",
-  },
+    description: "Access content on any device, anytime"
+  }
 ];

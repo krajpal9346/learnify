@@ -1,26 +1,40 @@
-import { Shield, LockKeyhole, ShieldCheck, User } from "lucide-react";
+import {
+    Shield,
+    LockKeyhole,
+    ShieldCheck,
+    User,
+} from "lucide-react";
 
 export const featureSecurityData = [
-  {
-    title: "Built with Trust & Security",
-    description:
-      "Your data is safe with us. We prioritize your privacy and never share your information.",
-    icon: Shield,
-  },
-  {
-    title: "Secure & Private",
-    description: "Your data is encrypted and never shared with third parties.",
-    icon: LockKeyhole,
-  },
-  {
-    title: "Trusted Platform",
-    description: "Used by 50,000+ learners worldwide to achieve their goals.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Learner First",
-    description:
-      "We're here to support your growth at every step of your learning journey.",
-    icon: User,
-  },
+    {
+        id: 1,
+        title: "Built with Trust & Security",
+        description:
+            "Your privacy comes first. We use industry-standard security practices to keep your learning experience safe and secure.",
+        icon: Shield,
+    },
+
+    {
+        id: 2,
+        title: "Secure & Private",
+        description:
+            "Your personal information is encrypted, securely stored, and never shared with third parties without your consent.",
+        icon: LockKeyhole,
+    },
+
+    {
+        id: 3,
+        title: "Trusted Platform",
+        description:
+            "Thousands of learners rely on Learnify AI every day to build skills, explore careers, and achieve their learning goals.",
+        icon: ShieldCheck,
+    },
+
+    {
+        id: 4,
+        title: "Learner First",
+        description:
+            "Everything we build is designed around helping learners stay motivated, learn effectively, and grow with confidence.",
+        icon: User,
+    },
 ];

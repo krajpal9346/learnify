@@ -15,10 +15,9 @@ export const pricingData = [
             "Access to free courses",
             "Basic roadmaps",
             "Progress tracking",
-            "Community access",
-        ],
+            "Community access"
+        ]
     },
-
     {
         title: "Pro",
         subtitle: "For serious learners",
@@ -36,10 +35,9 @@ export const pricingData = [
             "Personalized learning roadmap",
             "Unlimited premium courses",
             "Practice tests & quizzes",
-            "Priority support",
-        ],
+            "Priority support"
+        ]
     },
-
     {
         title: "Premium",
         subtitle: "For career achievers",
@@ -56,7 +54,7 @@ export const pricingData = [
             "Advanced analytic",
             "Interview preparation",
             "Certifications",
-            "Early feature access",
-        ],
-    },
+            "Early feature access"
+        ]
+    }
 ];

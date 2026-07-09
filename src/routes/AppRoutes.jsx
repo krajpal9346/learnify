@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ROUTES } from "../data/routes";
-
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Started from "../pages/Started";
@@ -47,7 +46,6 @@ const AppRoutes = () => {
 
                 <Route path={ROUTES.LOGIN} element={<Login />} />
                 <Route path={ROUTES.STARTED} element={<Started />} />
-
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>

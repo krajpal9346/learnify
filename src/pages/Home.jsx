@@ -1,9 +1,9 @@
-import Categories from "../components/ui/Categories";
-import Hero from "../components/ui/Hero";
-import Ready from "../components/ui/Ready";
-import Subscribe from "../components/ui/Subscribe";
-import Why from "../components/ui/Why";
-import Working from "../components/ui/Working";
+import Categories from "../components/home/Categories";
+import Hero from "../components/home/Hero";
+import Ready from "../components/home/Ready";
+import Subscribe from "../components/home/Subscribe";
+import Why from "../components/home/Why";
+import Working from "../components/home/Working";
 
 const Home = () => {
     return (

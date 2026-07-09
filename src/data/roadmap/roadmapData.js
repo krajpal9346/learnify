@@ -1,12 +1,4 @@
-import {
-    CircleCheckBig,
-    ChartNoAxesColumnIncreasing,
-    Rocket,
-    Lightbulb,
-    Target,
-    Check,
-    Circle,
-} from "lucide-react";
+import { CircleCheckBig, ChartNoAxesColumnIncreasing, Rocket, Lightbulb, Target, Check, Circle } from "lucide-react";
 
 export const roadmapData = [
     {
@@ -27,8 +19,8 @@ export const roadmapData = [
             { text: "Course Database Integration", completed: true },
             { text: "Basic Personalized Feed", completed: true },
             { text: "Progress Tracking", completed: true },
-            { text: "Web Platform Launch", completed: true },
-        ],
+            { text: "Web Platform Launch", completed: true }
+        ]
     },
     {
         phase: "Phase 2",
@@ -48,8 +40,8 @@ export const roadmapData = [
             { text: "Skill Gap Analysis", completed: true },
             { text: "Smart Content Filtering", completed: true },
             { text: "Email Notifications", completed: true },
-            { text: "Mobile Responsive UI", completed: true },
-        ],
+            { text: "Mobile Responsive UI", completed: true }
+        ]
     },
     {
         phase: "Phase 3",
@@ -69,8 +61,8 @@ export const roadmapData = [
             { text: "Real-time Recommendations", completed: true },
             { text: "AI Mentor (Beta)", completed: false },
             { text: "Voice Search", completed: false },
-            { text: "Deep Analytics Dashboard", completed: false },
-        ],
+            { text: "Deep Analytics Dashboard", completed: false }
+        ]
     },
     {
         phase: "Phase 4",
@@ -90,8 +82,8 @@ export const roadmapData = [
             { text: "Peer Learning Communities", completed: false },
             { text: "Gamification & Rewards", completed: false },
             { text: "Certificates & Achievements", completed: false },
-            { text: "Offline Learning Mode", completed: false },
-        ],
+            { text: "Offline Learning Mode", completed: false }
+        ]
     },
     {
         phase: "Phase 5",
@@ -111,7 +103,7 @@ export const roadmapData = [
             { text: "Career Path Prediction", completed: false },
             { text: "Employer Connect", completed: false },
             { text: "Marketplace for Creators", completed: false },
-            { text: "Lifelong Learning Ecosystem", completed: false },
-        ],
-    },
+            { text: "Lifelong Learning Ecosystem", completed: false }
+        ]
+    }
 ];

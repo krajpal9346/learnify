@@ -1,11 +1,4 @@
-import {
-    TestTubeDiagonal,
-    ChartColumnIncreasing,
-    Smartphone,
-    Bug,
-    Megaphone,
-    GraduationCap,
-} from "lucide-react";
+import { TestTubeDiagonal, ChartColumnIncreasing, Smartphone, Bug, Megaphone, GraduationCap } from "lucide-react";
 
 export const updatesData = [
     {
@@ -16,10 +9,8 @@ export const updatesData = [
         badgeBg: "bg-purple-100",
         badgeText: "text-[#6044da]",
         title: "AI Roadmap Generator is Here!",
-        description:
-            "Generate personalized learning roadmaps in seconds based on your goals, skills, and interests using advanced AI.",
+        description: "Generate personalized learning roadmaps in seconds based on your goals, skills, and interests using advanced AI."
     },
-
     {
         icon: ChartColumnIncreasing,
         iconBg: "bg-green-100",
@@ -28,10 +19,8 @@ export const updatesData = [
         badgeBg: "bg-green-100",
         badgeText: "text-[#16a34a]",
         title: "Learning Progress Analytics",
-        description:
-            "Track your learning journey with detailed analytics, insights, and performance metrics.",
+        description: "Track your learning journey with detailed analytics, insights, and performance metrics."
     },
-
     {
         icon: Smartphone,
         iconBg: "bg-orange-100",
@@ -40,10 +29,8 @@ export const updatesData = [
         badgeBg: "bg-green-100",
         badgeText: "text-[#16a34a]",
         title: "Mobile App Experience Improved",
-        description:
-            "We've enhanced the mobile experience with a new UI, faster performance, and offline access to saved content.",
+        description: "We've enhanced the mobile experience with a new UI, faster performance, and offline access to saved content."
     },
-
     {
         icon: Bug,
         iconBg: "bg-red-100",
@@ -52,10 +39,8 @@ export const updatesData = [
         badgeBg: "bg-red-100",
         badgeText: "text-[#f52020]",
         title: "Bug Fixes & Performance Updates",
-        description:
-            "Fixed issues with video playback, course saving, and improved overall platform performance.",
+        description: "Fixed issues with video playback, course saving, and improved overall platform performance."
     },
-
     {
         icon: Megaphone,
         iconBg: "bg-blue-100",
@@ -64,10 +49,8 @@ export const updatesData = [
         badgeBg: "bg-blue-100",
         badgeText: "text-[#2563eb]",
         title: "Introducing Learnify AI Pro",
-        description:
-            "Unlock advanced features like AI tutoring, interview prep, and priority support with Learnify AI Pro.",
+        description: "Unlock advanced features like AI tutoring, interview prep, and priority support with Learnify AI Pro."
     },
-
     {
         icon: GraduationCap,
         iconBg: "bg-purple-100",
@@ -76,7 +59,6 @@ export const updatesData = [
         badgeBg: "bg-purple-100",
         badgeText: "text-[#6044da]",
         title: "New Course Recommendations",
-        description:
-            "We've added thousands of new high-quality courses across tech, business, design, and more.",
-    },
+        description: "We've added thousands of new high-quality courses across tech, business, design, and more."
+    }
 ];

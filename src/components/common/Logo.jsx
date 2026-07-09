@@ -1,25 +1,26 @@
-import { Sparkles } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ROUTES } from "../../data/routes";
 
-const Logo = ({ size = "default", showSubtitle = true, className = "" }) => {
+const Logo = ({ size = "medium", variant = "dark" }) => {
     const sizes = {
-        small: { icon: 18, title: "text-lg", subtitle: "text-xs", },
-        default: { icon: 22, title: "text-xl", subtitle: "text-sm" },
-        large: { icon: 30, title: "text-2xl", subtitle: "text-base" }
+        small: { icon: 26, heading: "text-xl", subheading: "text-[10px]" },
+        medium: { icon: 34, heading: "text-2xl", subheading: "text-xs" },
+        large: { icon: 42, heading: "text-3xl", subheading: "text-sm" }
     };
 
-    const currentSize = sizes[size];
+    const currentSize = sizes[size] || sizes.medium;
+    const isLight = variant === "light";
 
     return (
-        <Link to="/" className={`flex items-center gap-3 ${className}`}>
-            <Sparkles size={currentSize.icon} className="text-[#6044da]" />
+        <Link to={ROUTES.HOME} className="flex w-fit items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-md">
+                <GraduationCap size={currentSize.icon} color="#6044da" strokeWidth={2.5} />
+            </div>
 
-            <div className="leading-tight">
-                <h1 className={`font-bold ${currentSize.title}`}>Learnify AI</h1>
-
-                {showSubtitle && (
-                    <p className={`text-gray-600 ${currentSize.subtitle}`}>AI Learning Recommender</p>
-                )}
+            <div className="flex flex-col gap-1">
+                <h1 className={`font-bold leading-none ${currentSize.heading} ${isLight ? "text-white" : "text-gray-900"}`}>Learnify</h1>
+                <p className={`${currentSize.subheading} tracking-[0.2em] ${isLight ? "text-purple-200" : "text-gray-500"}`}>AI Learning Platform</p>
             </div>
         </Link>
     );
