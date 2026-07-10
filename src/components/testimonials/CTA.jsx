@@ -19,9 +19,11 @@ const CTA = () => {
                             </button>
                         </Link>
 
-                        <button type="button" className="cursor-pointer rounded-xl border border-white/40 px-5 py-2.5 font-semibold text-white transition-all duration-300 hover:bg-white/10">
-                            Explore Features
-                        </button>
+                        <Link to={ROUTES.FEATURES}>
+                            <button type="button" className="cursor-pointer rounded-xl border border-white/40 px-5 py-2.5 font-semibold text-white transition-all duration-300 hover:bg-white/10">
+                                Explore Features
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
