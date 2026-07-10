@@ -1,17 +1,30 @@
 import { ShieldCheck } from "lucide-react";
 import { tableOfContentsData } from "../../data/privacy/tableOfContentsData";
 
-const TableOfContents = () => {
+const TableOfContents = ({ activeSection }) => {
+    const scrollToSection = (id) => {
+        const element = document.getElementById(`policy-${id}`);
+        if (!element) return;
+        const headerOffset = 110;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    };
+
     return (
         <aside className="w-full lg:w-1/4">
-            <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+            <div className="sticky top-28 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
                 <div className="border-b border-gray-200 pb-4">
                     <h2 className="text-xl font-bold">On this page</h2>
                 </div>
 
-                <div className="mt-5 flex flex-col gap-4">
+                <div className="mt-5 flex flex-col gap-2">
                     {tableOfContentsData.map((item) => (
-                        <button key={item.id} type="button" className="cursor-pointer text-left text-gray-700 transition-colors duration-200 hover:text-[#6044da]">
+                        <button key={item.id} type="button" onClick={() => scrollToSection(item.id)} className={`rounded-lg px-3 py-2 text-left transition-all duration-300 ${activeSection === item.id ? "bg-purple-100 font-semibold text-[#6044da]" : "text-gray-700 hover:bg-purple-50 hover:text-[#6044da]"}`}>
                             {item.id}. {item.title}
                         </button>
                     ))}

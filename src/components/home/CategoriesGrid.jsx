@@ -6,7 +6,7 @@ const CategoriesGrid = () => {
         <div className="w-full xl:w-1/2 flex flex-col gap-6">
             <SectionHeader badge="Explore Top Categories" title="Popular Learning Paths" align="center" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-3 2xl:grid-cols-5 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-3 gap-5">
                 {categoriesData.map((category) => {
                     const Icon = category.icon;
 

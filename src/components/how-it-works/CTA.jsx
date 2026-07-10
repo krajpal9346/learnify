@@ -1,6 +1,6 @@
 import { ArrowRight, PlayCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import laptop from "../../assets/laptop.png";
+import laptop from "../../assets/laptop.png"
 import { ROUTES } from "../../data/routes";
 
 const CTA = () => {

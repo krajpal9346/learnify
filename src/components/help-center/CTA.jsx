@@ -1,7 +1,5 @@
 import { MessageSquare } from "lucide-react";
-import { Link } from "react-router-dom";
 import CTAIllustration from "./CTAIllustration";
-import { ROUTES } from "../../data/routes";
 
 const CTA = () => {
     return (
@@ -16,12 +14,10 @@ const CTA = () => {
                     </div>
                 </div>
 
-                <Link to={ROUTES.CONTACT}>
-                    <button type="button" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#6044da] px-6 py-3.5 font-semibold text-white transition-all duration-300 hover:bg-[#5338d4] hover:shadow-lg sm:w-auto">
-                        Contact Support
-                        <MessageSquare size={18} aria-hidden="true" />
-                    </button>
-                </Link>
+                <a href="mailto:support@learnifyai.com?subject=Learnify%20AI%20Support" className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#6044da] px-6 py-3.5 font-semibold text-white transition-all duration-300 hover:bg-[#5338d4] hover:shadow-lg sm:w-auto">
+                    Contact Support
+                    <MessageSquare size={18} aria-hidden="true" />
+                </a>
             </div>
         </section>
     );

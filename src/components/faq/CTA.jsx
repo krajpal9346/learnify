@@ -12,12 +12,10 @@ const CTA = () => {
                     <p className="text-base leading-relaxed text-purple-100 sm:text-lg">Our support team is always here to help you with anything you need.</p>
 
                     <div className="flex flex-col justify-center gap-4 sm:flex-row sm:gap-5 xl:justify-start">
-                        <Link to={ROUTES.HELP_CENTER} className="w-full sm:w-auto">
-                            <button type="button" className="flex w-full sm:w-auto cursor-pointer items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 font-semibold text-[#6044da] transition-all duration-300 hover:scale-105">
-                                Contact Support
-                                <ArrowRight size={18} aria-hidden="true" />
-                            </button>
-                        </Link>
+                        <a href="mailto:support@learnifyai.com?subject=Learnify%20AI%20Support" className="flex w-full sm:w-auto cursor-pointer items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 font-semibold text-[#6044da] transition-all duration-300 hover:scale-105">
+                            Contact Support
+                            <ArrowRight size={18} aria-hidden="true" />
+                        </a>
 
                         <Link to={ROUTES.HELP_CENTER} className="w-full sm:w-auto">
                             <button type="button" className="flex w-full sm:w-auto cursor-pointer items-center justify-center gap-2 rounded-xl border border-white px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-white/10">

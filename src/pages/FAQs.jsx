@@ -7,19 +7,20 @@ import CTA from "../components/faq/CTA";
 const FAQs = () => {
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [openQuestion, setOpenQuestion] = useState(0);
+    const [searchQuery, setSearchQuery] = useState("");
 
     return (
         <main className="pt-20">
-            <Hero />
+            <Hero searchQuery={searchQuery} setSearchQuery={setSearchQuery} setSelectedCategory={setSelectedCategory} setOpenQuestion={setOpenQuestion} />
 
-            <section className="px-5 py-10 sm:px-10 xl:px-20 xl:py-15">
+            <section id="faq-section" className="px-5 py-10 sm:px-10 xl:px-20 xl:py-15">
                 <div className="mb-10">
                     <h2 className="text-center text-2xl font-bold sm:text-3xl">Browse by category or popular questions</h2>
                 </div>
 
                 <div className="flex flex-col gap-8 lg:flex-row">
-                    <Categories selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} setOpenQuestion={setOpenQuestion} />
-                    <FAQAccordion selectedCategory={selectedCategory} openQuestion={openQuestion} setOpenQuestion={setOpenQuestion} />
+                    <Categories selectedCategory={selectedCategory} searchQuery={searchQuery} setSelectedCategory={setSelectedCategory} setOpenQuestion={setOpenQuestion} />
+                    <FAQAccordion selectedCategory={selectedCategory} searchQuery={searchQuery} openQuestion={openQuestion} setOpenQuestion={setOpenQuestion} />
                 </div>
             </section>
 

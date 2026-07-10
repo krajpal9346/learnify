@@ -10,13 +10,8 @@ const Header = () => {
     const desktopNavLinkClass = ({ isActive }) => `font-medium transition-all duration-300 pb-1 border-b-2 ${isActive ? "text-[#6044da] border-[#6044da]" : "text-gray-700 border-transparent hover:text-[#6044da]"}`;
     const mobileNavLinkClass = ({ isActive }) => `font-medium py-2 transition-colors duration-200 ${isActive ? "text-[#6044da]" : "text-gray-700"}`;
 
-    const toggleMenu = () => {
-        setIsOpen((prev) => !prev);
-    };
-
-    const closeMenu = () => {
-        setIsOpen(false);
-    };
+    const toggleMenu = () => { setIsOpen((prev) => !prev); };
+    const closeMenu = () => { setIsOpen(false); };
 
     return (
         <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">

@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { miniFaqData } from "../../data/help-center/miniFaqData";
+import { ROUTES } from "../../data/routes";
 import MiniFAQItem from "./MiniFAQItem";
 
 const MiniFAQ = () => {
@@ -13,10 +15,10 @@ const MiniFAQ = () => {
                 ))}
             </div>
 
-            <button type="button" className="mt-6 flex cursor-pointer items-center gap-2 font-semibold text-[#6044da] transition-all duration-300 hover:gap-3">
+            <Link to={ROUTES.FAQS} className="mt-6 flex w-fit items-center gap-2 font-semibold text-[#6044da] transition-all duration-300 hover:gap-3">
                 View All FAQs
                 <ArrowRight size={18} aria-hidden="true" />
-            </button>
+            </Link>
         </section>
     );
 };

@@ -6,97 +6,111 @@ export const termsOfServiceData = [
         icon: ShieldCheck,
         iconColor: "#6044da",
         title: "Acceptance of Terms",
-        description: "By accessing or using Learnify AI, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree with these terms, please discontinue using our platform."
+        description: "By accessing or using Learnify AI, you agree to be bound by these Terms of Service and our Privacy Policy.",
+        fullDescription: "By accessing, browsing, or using Learnify AI, you acknowledge that you have read, understood, and agree to comply with these Terms of Service. These terms govern your relationship with Learnify AI and establish the rules for using our platform. If you disagree with any portion of these terms, you should discontinue use of the platform immediately."
     },
     {
         id: 2,
         icon: BookOpen,
         iconColor: "#6044da",
         title: "Description of Service",
-        description: "Learnify AI provides an AI-powered platform that helps learners discover personalized courses, learning paths, and educational resources. We reserve the right to update, modify, or discontinue any part of the service at any time."
+        description: "Learnify AI provides AI-powered learning tools, personalized roadmaps, and educational resources.",
+        fullDescription: "Learnify AI offers AI-driven educational services including personalized learning roadmaps, skill assessments, course recommendations, interview preparation, and career guidance. Features may change, improve, or be discontinued over time as we continue enhancing the platform. We reserve the right to modify or remove features without prior notice when necessary."
     },
     {
         id: 3,
         icon: UserRound,
         iconColor: "#6044da",
         title: "User Accounts",
-        description: "Certain features require you to create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account."
+        description: "Certain features require account registration and secure login credentials.",
+        fullDescription: "You are responsible for maintaining the confidentiality of your account credentials and for all activities performed through your account. You agree to provide accurate information during registration and keep your profile updated. You should immediately notify us if you suspect unauthorized access to your account."
     },
     {
         id: 4,
         icon: CircleCheckBig,
         iconColor: "#6044da",
         title: "Acceptable Use",
-        description: "You agree to use Learnify AI only for lawful purposes. You must not misuse the platform, interfere with its operation, attempt unauthorized access, or engage in activities that could harm other users."
+        description: "You agree to use Learnify AI responsibly and lawfully.",
+        fullDescription: "Users must not misuse the platform by attempting unauthorized access, distributing malware, disrupting services, uploading harmful content, violating intellectual property rights, impersonating others, or engaging in illegal activities. Learnify AI reserves the right to suspend or terminate accounts involved in prohibited behavior."
     },
     {
         id: 5,
         icon: FileText,
         iconColor: "#6044da",
         title: "Intellectual Property",
-        description: "All content, trademarks, logos, software, and materials available through Learnify AI are owned by us or our licensors and are protected by applicable intellectual property laws."
+        description: "All Learnify AI content and software remain protected by intellectual property laws.",
+        fullDescription: "Unless otherwise stated, all content, graphics, software, logos, trademarks, text, AI models, and educational materials are owned by Learnify AI or its licensors. Users may not reproduce, redistribute, modify, or commercially exploit any platform content without prior written permission."
     },
     {
         id: 6,
         icon: Briefcase,
         iconColor: "#6044da",
         title: "User Content",
-        description: "You retain ownership of any content you submit. By uploading content, you grant Learnify AI a limited license to use, store, and process it solely for operating and improving our services."
+        description: "You retain ownership of the content you submit.",
+        fullDescription: "Any projects, documents, feedback, or other materials submitted by users remain their property. However, you grant Learnify AI a limited, non-exclusive license to store, process, and display your content as necessary for providing platform services and improving user experience."
     },
     {
         id: 7,
         icon: ShieldCheck,
         iconColor: "#6044da",
         title: "Payments & Subscriptions",
-        description: "Some features may require paid subscriptions. Subscription fees are billed according to the selected plan and are generally non-refundable unless otherwise required by applicable law."
+        description: "Premium features may require paid subscriptions.",
+        fullDescription: "Subscription pricing, billing cycles, renewals, cancellations, and refunds are governed by the selected subscription plan. Payments are securely processed through trusted third-party payment providers. Subscription fees are generally non-refundable except where required by applicable law."
     },
     {
         id: 8,
         icon: TriangleAlert,
         iconColor: "#6044da",
         title: "Disclaimer of Warranties",
-        description: 'Learnify AI is provided on an "as is" and "as available" basis. We make no warranties regarding uninterrupted service, accuracy, reliability, or suitability for a particular purpose.'
+        description: "The platform is provided on an 'as is' basis.",
+        fullDescription: "While we strive to provide reliable services, Learnify AI does not guarantee uninterrupted availability, complete accuracy, or error-free operation. Educational recommendations generated by AI are intended as guidance and should not be considered professional or legal advice."
     },
     {
         id: 9,
         icon: TriangleAlert,
         iconColor: "#6044da",
         title: "Limitation of Liability",
-        description: "To the fullest extent permitted by law, Learnify AI shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use of the platform."
+        description: "Our liability is limited to the maximum extent permitted by law.",
+        fullDescription: "Learnify AI shall not be responsible for indirect, incidental, consequential, or special damages arising from use of the platform, including data loss, service interruptions, missed opportunities, or business losses resulting from platform usage."
     },
     {
         id: 10,
         icon: Scale,
         iconColor: "#6044da",
         title: "Indemnification",
-        description: "You agree to indemnify and hold Learnify AI, its affiliates, employees, and partners harmless from any claims, damages, liabilities, or expenses arising from your use of the service or violation of these Terms."
+        description: "Users agree to protect Learnify AI from claims resulting from misuse.",
+        fullDescription: "You agree to indemnify and hold harmless Learnify AI, its employees, partners, affiliates, and licensors from any claims, damages, liabilities, losses, or expenses arising from your violation of these Terms or misuse of the platform."
     },
     {
         id: 11,
         icon: Trash2,
         iconColor: "#6044da",
         title: "Termination",
-        description: "We reserve the right to suspend or terminate your account if you violate these Terms, engage in fraudulent activity, or misuse our platform in any way."
+        description: "Accounts violating these Terms may be suspended or terminated.",
+        fullDescription: "Learnify AI reserves the right to suspend, restrict, or permanently terminate user accounts involved in fraudulent activities, abuse, unauthorized access attempts, policy violations, or any activity that threatens the safety and integrity of the platform."
     },
     {
         id: 12,
         icon: FileText,
         iconColor: "#6044da",
         title: "Governing Law",
-        description: "These Terms shall be governed by and interpreted in accordance with the laws of India. Any disputes arising from these Terms shall be subject to the jurisdiction of the appropriate courts."
+        description: "These Terms are governed by the laws of India.",
+        fullDescription: "These Terms of Service shall be governed by and interpreted according to the laws of India. Any legal disputes shall be resolved exclusively within the appropriate courts having jurisdiction in India unless otherwise required by applicable law."
     },
     {
         id: 13,
         icon: FileText,
         iconColor: "#6044da",
         title: "Changes to These Terms",
-        description: "We may revise these Terms of Service from time to time. Any significant changes will be communicated through our platform, and the updated version will include a revised effective date."
+        description: "We may update these Terms periodically.",
+        fullDescription: "Learnify AI may revise these Terms to reflect legal requirements, technological advancements, business changes, or improvements to our services. Updated versions will always be published on this page together with the latest effective date."
     },
     {
         id: 14,
         icon: Mail,
         iconColor: "#6044da",
         title: "Contact Us",
-        description: "If you have any questions, concerns, or feedback regarding these Terms of Service, please contact our support team. We're always happy to assist you."
+        description: "Questions or concerns? We're here to help.",
+        fullDescription: "If you have questions about these Terms of Service, require clarification regarding your rights and responsibilities, or need assistance with any legal or policy-related matter, please contact our support team through the Help Center. We aim to respond promptly to all inquiries."
     }
 ];

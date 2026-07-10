@@ -1,8 +1,19 @@
+import { useState } from "react";
 import SectionHeader from "../common/SectionHeader";
 
 const Subscribe = () => {
+    const [email, setEmail] = useState("");
+
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        if (!email.trim()) {
+            alert("Please enter your email address.");
+            return;
+        }
+
+        alert(`Thank you for subscribing!\n\nEmail: ${email}`);
+        setEmail("");
     };
 
     const inputClass = "w-full sm:w-72 px-4 py-3 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-[#6044da]";
@@ -14,7 +25,7 @@ const Subscribe = () => {
                 <SectionHeader title="Stay updated with Learnify AI" description="Get the latest courses, tips and updates delivered to your inbox." align="left" />
 
                 <form className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto" onSubmit={handleSubmit}>
-                    <input type="email" placeholder="Enter your email" aria-label="Email address" autoComplete="email" className={inputClass} />
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" aria-label="Email address" autoComplete="email" required className={inputClass} />
                     <button type="submit" className={buttonClass}>Subscribe</button>
                 </form>
             </div>

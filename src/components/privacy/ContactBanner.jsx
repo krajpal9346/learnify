@@ -1,4 +1,6 @@
 import { Mail, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../data/routes";
 
 const ContactBanner = () => {
     return (
@@ -15,10 +17,10 @@ const ContactBanner = () => {
                     </div>
                 </div>
 
-                <button type="button" className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-xl border border-[#6044da] px-6 py-3 font-semibold text-[#6044da] transition-all duration-300 hover:bg-[#6044da] hover:text-white sm:w-auto">
+                <Link to={ROUTES.HELP_CENTER} className="flex w-full items-center justify-center gap-3 rounded-xl border border-[#6044da] px-6 py-3 font-semibold text-[#6044da] transition-all duration-300 hover:bg-[#6044da] hover:text-white sm:w-auto">
                     Contact Us
                     <Mail size={20} aria-hidden="true" />
-                </button>
+                </Link>
             </div>
         </section>
     );

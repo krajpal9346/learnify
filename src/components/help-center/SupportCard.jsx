@@ -12,10 +12,10 @@ const SupportCard = () => {
                 <MessagesSquare size={64} color="#6044da" strokeWidth={2} className="shrink-0 sm:h-18 sm:w-18" aria-hidden="true" />
             </div>
 
-            <button type="button" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#6044da] px-5 py-3.5 font-semibold text-white transition-all duration-300 hover:bg-[#5338d4] hover:shadow-lg">
+            <a href="mailto:support@learnifyai.com?subject=Learnify%20AI%20Support" className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#6044da] px-5 py-3.5 font-semibold text-white transition-all duration-300 hover:bg-[#5338d4] hover:shadow-lg">
                 Contact Support
                 <MessageSquare size={18} aria-hidden="true" />
-            </button>
+            </a>
         </section>
     );
 };
