@@ -9,13 +9,13 @@ const ContributorCard = () => {
 
             <div className="flex flex-col gap-2">
                 <h3 className="text-xl font-bold sm:text-2xl">Write for Learnify</h3>
-                <p className="leading-7 text-purple-100">Share your insights, experiences, and expertise with thousands of learners around the world.</p>
+                <p className="leading-7 text-purple-100">Share your insights, experiences, tutorials, and expertise with thousands of learners around the world. Help students grow while building your own personal brand.</p>
             </div>
 
-            <button type="button" className="flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-white py-3 font-semibold text-[#6044da] transition-all duration-300 hover:scale-[1.02]">
+            <a href="mailto:contribute@learnifyai.com?subject=Learnify%20AI%Contribute" className="flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-white py-3 font-semibold text-[#6044da] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-100">
                 Become a Contributor
                 <ChevronRight size={18} aria-hidden="true" />
-            </button>
+            </a>
         </section>
     );
 };

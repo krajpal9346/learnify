@@ -11,35 +11,36 @@ const Blogs = () => {
     const [searchTerm, setSearchTerm] = useState("");
 
     const filteredBlogs = useMemo(() => {
+        const search = searchTerm.trim().toLowerCase();
+
         return blogsData.filter((blog) => {
             const matchesCategory = activeCategory === "All Blogs" || blog.category === activeCategory;
-            const search = searchTerm.toLowerCase();
-            const matchesSearch =
+
+            const matchesSearch = search === "" ||
                 blog.title.toLowerCase().includes(search) ||
                 blog.description.toLowerCase().includes(search) ||
-                blog.category.toLowerCase().includes(search);
+                blog.category.toLowerCase().includes(search) ||
+                blog.author.toLowerCase().includes(search);
 
-            return (
-                matchesCategory && matchesSearch
-            );
+            return matchesCategory && matchesSearch;
         });
     }, [activeCategory, searchTerm]);
 
-    const handleNewsletterSubmit = (event) => {
-        event.preventDefault();
+    const handleNewsletterSubmit = (email) => {
+        console.log("Newsletter subscription:", email);
     };
 
     return (
         <main>
-            <Hero searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-            <CategoryFilter activeCategory={activeCategory} setActiveCategory={setActiveCategory}/>
+            <Hero searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+            <CategoryFilter activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 
             <section className="flex flex-col gap-10 px-4 pb-10 sm:px-8 lg:px-12 xl:flex-row xl:px-20">
-                <BlogGrid filteredBlogs={filteredBlogs}/>
+                <BlogGrid filteredBlogs={filteredBlogs} />
                 <Sidebar />
             </section>
 
-            <Newsletter handleNewsletterSubmit={handleNewsletterSubmit}/>
+            <Newsletter handleNewsletterSubmit={handleNewsletterSubmit} />
         </main>
     );
 };
