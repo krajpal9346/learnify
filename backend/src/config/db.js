@@ -4,8 +4,17 @@ let memoryServer = null;
 
 const connectDB = async () => {
     let uri = process.env.MONGODB_URI;
+    const isProduction = process.env.NODE_ENV === "production";
+    const useMemory = !uri || uri === "memory";
 
-    if (!uri || uri === "memory") {
+    if (useMemory && isProduction) {
+        throw new Error(
+            "MONGODB_URI=memory is not allowed in production. " +
+                "Set MONGODB_URI to a MongoDB Atlas connection string. See DEPLOY.md."
+        );
+    }
+
+    if (useMemory) {
         const { MongoMemoryServer } = require("mongodb-memory-server");
         memoryServer = await MongoMemoryServer.create();
         uri = memoryServer.getUri("learnify");

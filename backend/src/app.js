@@ -11,10 +11,50 @@ const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 const app = express();
 
+// Required on Render/Heroku so secure cookies work behind the proxy
+if (process.env.NODE_ENV === "production") {
+    app.set("trust proxy", 1);
+}
+
+const parseOriginList = (value) =>
+    (value || "")
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean);
+
+const allowedOrigins = new Set([
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    ...parseOriginList(process.env.CLIENT_URL),
+    ...parseOriginList(process.env.CLIENT_URLS),
+]);
+
+const isVercelPreview = (origin) => {
+    try {
+        const { hostname } = new URL(origin);
+        return hostname === "vercel.app" || hostname.endsWith(".vercel.app");
+    } catch {
+        return false;
+    }
+};
+
+const corsOrigin = (origin, callback) => {
+    // Non-browser clients (curl, health checks) often omit Origin
+    if (!origin) {
+        return callback(null, true);
+    }
+
+    if (allowedOrigins.has(origin) || isVercelPreview(origin)) {
+        return callback(null, true);
+    }
+
+    return callback(null, false);
+};
+
 app.use(helmet());
 app.use(
     cors({
-        origin: process.env.CLIENT_URL || "http://localhost:5173",
+        origin: corsOrigin,
         credentials: true,
     })
 );

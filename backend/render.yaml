@@ -1,0 +1,25 @@
+# Use this file when Root Directory is already set to `backend` in the Render UI.
+# Prefer the repo-root `render.yaml` for Blueprint deploys.
+services:
+  - type: web
+    name: learnify-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: CLIENT_URL
+        sync: false
+      - key: CLIENT_URLS
+        sync: false
+      - key: COOKIE_NAME
+        value: learnify_token

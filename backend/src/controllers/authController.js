@@ -81,11 +81,8 @@ const login = asyncHandler(async (req, res) => {
 
 const logout = asyncHandler(async (req, res) => {
     const cookieName = process.env.COOKIE_NAME || "learnify_token";
-    res.clearCookie(cookieName, {
-        httpOnly: true,
-        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-        secure: process.env.NODE_ENV === "production",
-    });
+    const { maxAge, ...clearOptions } = cookieOptions();
+    res.clearCookie(cookieName, clearOptions);
 
     res.status(200).json({
         success: true,
